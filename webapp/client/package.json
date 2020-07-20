@@ -80,7 +80,7 @@
   },
   "scripts": {
     "start": "cross-env PORT=3001 BROWSER=none EXTEND_ESLINT=true react-app-rewired start",
-    "build": "cross-env EXTEND_ESLINT=true react-app-rewired build",
+    "build": "cross-env EXTEND_ESLINT=true react-app-rewired --max_old_space_size=4096 build",
     "test": "cross-env react-app-rewired test --modulePaths=src",
     "test:CI": "cross-env CI=true react-app-rewired test --modulePaths=src --no-watch",
     "test:debug": "cross-env DEBUG=jest react-app-rewired test --modulePaths=src",
